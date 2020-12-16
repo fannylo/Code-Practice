@@ -3,7 +3,7 @@ import os
 import sys
 
 #Comment is writed in check.sh
-cmd1 = "grep '<Name>' sh3-getDevice.20201203.txt | sed 's/^[ \t]*//g' | cut -b 7- | sed 's/........$//' > final.csv"
+cmd1 = "grep '<Name>' sh3-getDevice.20201203.txt | sed 's/<Name>//g' | sed 's/<\/Name>//g' | sed 's/[[:space:]]//g' > final.csv"
 os.system(cmd1)
 cmd2 = "sed s/[[:space:]]//g check_item.csv | sed 's/(.*)//' | sed 's/\[.*\]//' > check_item2.csv"
 os.system(cmd2)
