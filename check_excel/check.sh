@@ -1,4 +1,4 @@
-#!/usr/sh
+#!/bin/bash
 
 #grep '<Name>' sh3-getDevice.20201203.txt > test.csv #擷取有<Name>的那一行
 #sed 's/^[ \t]*//g' test.csv > test2.txt #去除<Name>前面的空格
